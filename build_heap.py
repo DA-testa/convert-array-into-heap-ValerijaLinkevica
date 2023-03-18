@@ -97,7 +97,11 @@ def main():
 
     if "F" in choice:
         filename = input()
-        useFile = 'test/' + filename
+
+        if "a" in filename:
+            return("Incorrect file name")
+
+        useFile = 'tests/' + filename
         file1 = open(useFile, 'r')
         lines = file1.readlines()
 
